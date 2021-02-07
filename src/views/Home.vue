@@ -1,18 +1,37 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <status-area/>
+    <enemy-area/>
+    <div class="flex">
+      <command-area/>
+      <text-area/>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import StatusArea from '@/components/StatusArea.vue'
+import EnemyArea from '@/components/EnemyArea.vue'
+import CommandArea from '@/components/CommandArea.vue'
+import TextArea from '@/components/TextArea.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    StatusArea,
+    EnemyArea,
+    CommandArea,
+    TextArea
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+  margin-top: 64px;
+  text-align: left;
+}
+.flex {
+  display: flex;
+}
+</style>
